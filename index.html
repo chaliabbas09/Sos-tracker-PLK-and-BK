@@ -1,0 +1,874 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+<!-- Standard favicon -->
+    <link rel="icon" type="image/x-icon" href="../img/favicon/favicon.ico">
+    
+    <!-- PNG icons for different sizes -->
+    <link rel="icon" type="image/png" sizes="16x16" href="./img/favicon/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon/favicon-32x32.png">
+    
+    <!-- Apple Touch Icon -->
+    <link rel="apple-touch-icon" href="../img/favicon/apple-touch-icon.png">
+    
+    <!-- Android Chrome icons -->
+    <link rel="icon" type="image/png" sizes="192x192" href="./img/favicon/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="./img/favicon/android-chrome-512x512.png">
+    
+    <!-- Web Manifest -->
+    <link rel="manifest" href="./img/favicon/site.webmanifest">
+
+  <!-- bootstrap css -->
+  <link rel="stylesheet" href="./css/bootstrap.min.css" />
+  <!-- main css -->
+  <link rel="stylesheet" href="./css/main.css" />
+
+  <!-- font awesome -->
+  <link rel="stylesheet" href="./css/all.css" />
+  <title>Speed of service timers</title>
+</head>
+
+<body>
+  <!-- header -->
+  <header id="home">
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark px-5">
+      <a href="https://intranet.intertek.com/" class="navbar-brand">
+        <img src="./img/intertek-logo.jpg" alt="company logo" class="img-fluid rounded-circle" width="80" />
+      </a>
+      <button class="navbar-toggler" type="button" data-target="#myNavbar" data-toggle="collapse">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="navbar-nav mx-auto ">
+         
+              <li class="pcs-systems-item">
+                <li class="pcs-systems-item-inner d-flex justify-content-between align-items-center">
+                  <a href="#bkTotal" class="pcs-systems-item-inner-link">
+                    <img src="./img/bk_whopper.gif" alt="stopwatch" width="40" class="img-fluid mt-3 mr-4"> Burger King Dine In times
+                  </a>
+                </li>
+            </li>
+            <li class="pcs-systems-item ">
+                <li class="pcs-systems-item-inner d-flex justify-content-between align-items-center">
+                  <a href="#kfcServiceTimesTotal" class="pcs-systems-item-inner-link">
+                    <img src="./img/plk-funny-gif.gif" alt="" width="40"  class="img-fluid mt-3 mr-4"> Popeyes Dine In times
+                  </a>
+                </li>
+            </li>
+            <li class="pcs-systems-item">
+              <li class="pcs-systems-item-inner d-flex justify-content-between align-items-center">
+                <a href="#kfcDTTotal" class="pcs-systems-item-inner-link">
+                    <img src="./img/th-donut-gif.gif" alt="" width="40" class="img-fluid mt-3 mr-4"> Tim Hortons Dine In times
+                </a>
+              </li>
+            </li>
+
+            <li class="pcs-systems-item">
+              <li class="pcs-systems-item-inner d-flex justify-content-between align-items-center">
+                <a href="#kfcHDTotal" class="pcs-systems-item-inner-link">
+                    <img src="./img/th-gif.gif" alt="" width="40" class="img-fluid mt-3 mr-4"> Tim Hortons Dine In times
+                </a>
+              </li>
+            </li>
+        </ul>
+      </div>
+    </nav>
+    <!-- end of navbar -->
+
+    <!-- banner section -->
+    <section id="timers-banner" class="info-banner">
+      <div class="container-fluid">
+        <div class="row d-flex flex-column ">
+          <img alt="RBI logo" src="./img/rbi_logo.png" width="145" class="mx-auto mt-5">
+          <div class="col-10 mx-auto">
+            <div class="py-3 banner-center">
+              <h1 class="text-capitalize text-center custom-heading mt-2 mt-lg-3 d-flex flex-column flex-md-row justify-content-center align-items-center">
+                <img src="./img/stopwatch-img-trans.png" alt="stopwatch image" class="img-fluid mt-3 mr-4" width="80">
+                RBI Brands service time trackers
+              </h1>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- end of banner section -->
+  </header>
+  <!-- end of header -->
+
+
+  <!-- Burger King timers section -->
+      <section id="bkTotal" class="guide-info py-1 mt-1 mb-5 gray_bgr">
+        <div class="container mb-4">
+          <h1 class="text-center my-3">
+            <img alt="Burger King logo" src="./img/bk_logo.png" width="65">
+            Burger King - Dine in service times
+            <button class="info-icon" data-toggle="modal" data-target="#bk_service_info">
+              <i class="fas fa-info-circle"></i>
+            </button>
+          </h1>
+    
+    
+          <p class="lead">
+            Wait time starts when Guest receives receipt or cash/card back and ends when Guest receives their order. If checking kiosks transactions, please click on the New Guest button when the guest receives their receipt. Target waiting time is 120 seconds (2:00 min).  <br>
+            If average time is above 5 minutes, please escalate it to GS53C
+          </p>
+
+          <div class="container row">
+            <div class="info-img-container col-1">
+              <img src="./img/information.png" alt="info mark" class="info-image-icon">
+            </div>
+            <p class="alert alert-primary col-11">
+              If order has <strong>four or more combo meals in one transaction</strong>, do not include that transaction in the service time tracker
+            </p>
+          </div>
+
+          <div class="container row">
+            <div class="info-img-container col-1">
+              <img src="./img/mark.png" alt="info mark" class="info-image-icon">
+            </div>
+            <p class="alert alert-danger col-11">
+              Min <strong>5 transactions</strong> MUST be observed
+            </p>
+          </div>
+
+
+    
+          <!-- <hr class="style14"> -->
+    
+          <!-- service time control - start the new customer -->
+          <div class="container mt-4 ">
+            <div class="row">
+              <div class="col-10 mx-auto text-center">
+                  <button class="editBox stopwatch" id="start__BK"> New Guest
+                    <img src="img/bk_drink.gif" alt="" width="60" class="stopwatch-icon">
+                  </button>
+                  <button class="editBox stopwatch restart mt-2" onclick="location.reload();">
+                    <i class="fas fa-redo"></i>
+                    <p class="reload-text">Reload page</p>
+                  </button>
+                <!-- </div> -->
+              </div>
+            </div>
+            <div class="row service__times">
+              <div class="col-10 mx-auto">
+                <div class="row justify-content-around">
+                  <div class="col-0 col-sm-0 mx-auto" hidden>
+                    <div class="timer__serviceTime clearfix" id="bk-timer__serviceTime">
+                      <div class="timer__serviceTime--text left">Avg Order to delivery time</div>
+                      <div class="timer__serviceTime--value right" id="bk-serviceTime">0:00</div>
+                    </div>
+                  </div>
+                  <div class="col-10 col-sm-6 mx-auto">
+                    <div class="timer__totalTime clearfix" id="bk-timer__totalTime">
+                      <div class="timer__totalTime--text left">Avg service time at front counter</div>
+                      <div class="timer__totalTime--value right" id="bk-totalServiceTime">0:00</div>
+                    </div>
+                  </div>
+                  <div class="col-8 col-sm-6 mx-auto">
+                    <div class="timer__totalTime clearfix" id="timer__totalCust">
+                      <div class="timer__totalTime--text left">Number of completed transactions: </div>
+                      <div class="timer__totalTime--value right" id="bk-totalCustomers">0</div>
+                    </div>
+                  </div>
+  
+                </div>
+              </div>
+            </div>
+          </div>
+    
+          <div class="row py-2">
+            <!-- a table with measured times -->
+            <div class="col-12 mx-auto ">
+              <!-- description row -->
+              <div class="row py-2 info-container">
+                <div class="col-3 text-center align-content-center ">
+                  <p class="info-text">Guest description</p>
+                </div>
+                <!-- timers col -->
+                <div class="col-6">
+                  <div class="d-flex justify-content-between">
+                    <div class="col-4 text-center">
+                      <p class="info-text">Time start</p>
+                    </div>
+                    <div class="col-4 text-center">
+                      <p class="info-text">Order received</p>
+                    </div>
+                    <div class="col-4 text-center">
+                      <p class="info-text">Service time</p>
+                    </div>
+                  </div>
+                </div>
+                <!-- end of timers col -->
+                <div class="col-3 text-center time-edits">
+                  <div class="d-flex justify-content-between">
+                    <div class="col-6 text-center">
+                      <p class="info-text">Order received</p>
+                    </div>
+                    <div class="col-6 text-center">
+                      <p class="info-text">Delete transaction</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- end of description row -->
+    
+              <div class="bk_List">
+               
+                <!-- HERE GOES NEW LINE OF SOS TIMER -->
+  
+  
+              </div>
+    
+            </div>
+            <!-- This is the alert when the average time goes above 5 min -->
+              <div id="bk-escalation-alert" class="alert alert-danger mt-5" style="display:none;">
+                  The average service time exceeded 5 minutes, please remember to escalate it
+                  to Guest Experience Critical GS53C.
+              </div>
+
+            <!-- end of table with measured times -->
+    
+          </div>
+    
+        </div>
+        <!--end of container  -->
+      </section>
+      <!-- End of Burger King timers section -->
+
+
+      <hr class="separate-section">
+
+
+
+  <!-- Popeyes timers section -->
+  <section id="kfcServiceTimesTotal" class="guide-info py-1 mt-1 ">
+    <div class="container">
+      <h1 class="text-center my-3 custom-font-size">
+       <img alt="Popeyes logo" src="./img/plk-logo-trans.png" width="80">
+       Popeyes - Dine in service times
+        <button class="info-icon mt-2" data-toggle="modal" data-target="#kfc_fc_service_info">
+          <i class="fas fa-info-circle"></i>
+        </button>
+      </h1>
+
+      <p class="lead">
+        Wait time starts when Guest receives receipt or cash/card back and ends when Guest receives their order. If checking kiosks transactions, please click on the New Guest button when the customer receives their receipt. Target waiting time is 135 seconds (2:15 min). <br>
+        If average time is above 5 minutes, please escalate it to GS53C
+      </p>
+
+      <div class="container row">
+        <div class="info-img-container col-1">
+          <img src="./img/information.png" alt="info mark" class="info-image-icon">
+        </div>
+        <p class="alert alert-primary col-11">
+          If order has <strong>four or more combo meals in one transaction</strong>, do not include that transaction in the service time tracker
+        </p>
+      </div>
+
+      <div class="container row">
+        <div class="info-img-container col-1">
+          <img src="./img/mark.png" alt="info mark" class="info-image-icon">
+        </div>
+        <p class="alert alert-danger col-11">
+          Min <strong>5 transactions</strong> MUST be observed
+        </p>
+      </div>
+
+      <!-- service time control - start the new customer -->
+          <div class="container mt-4 ">
+            <div class="row">
+              <div class="col-12 col-md-10 mx-auto text-center d-flex justify-content-center">
+                  <button class="editBox stopwatch mr-2" id="start"> New Guest<img src="./img/plk-gif-sandwich.gif" alt="" width="60" class="stopwatch-icon">
+                  </button>
+                  <button class="editBox stopwatch restart mt-0" onclick="location.reload();">
+                    <i class="fas fa-redo"></i>
+                    <p class="reload-text">Reload page</p>
+                  </button>
+                <!-- </div> -->
+              </div>
+            </div>
+            <div class="row service__times">
+              <div class="col-12 col-md-10 mx-auto">
+                <div class="row justify-content-around">
+                  <div class="col-0 col-sm-0 mx-auto" hidden>
+                    <div class="timer__serviceTime clearfix" id="kfc-timer__serviceTime">
+                      <div class="timer__serviceTime--text left">Avg service time</div>
+                      <div class="timer__serviceTime--value right" id="kfc-serviceTime">0:00</div>
+                    </div>
+                  </div>
+                  <div class="col-10 col-md-6 mx-auto mb-3 mb-md-0">
+                    <div class="timer__totalTime clearfix" id="kfc-timer__totalTime">
+                      <div class="timer__totalTime--text left">Avg service time</div>
+                      <div class="timer__totalTime--value right" id="kfc-totalServiceTime">0:00</div>
+                    </div>
+                  </div>
+                  <div class="col-10 col-md-6 mx-auto">
+                    <div class="timer__totalTime clearfix transactions" id="timer__totalCust">
+                      <div class="timer__totalTime--text left">Num of trans: </div>
+                      <div class="timer__totalTime--value right" id="kfc-totalCustomers">0</div>
+                    </div>
+                  </div>
+  
+                </div>
+              </div>
+            </div>
+          </div>
+
+     <div class="row py-2">
+            <!-- a table with measured times -->
+            <div class="col-12 mx-auto ">
+              <!-- description row -->
+              <div class="row py-2 info-container">
+                <div class="col-4 col-md-3 text-center align-content-md-center ">
+                  <p class="info-text">Guest description</p>
+                </div>
+                <!-- timers col -->
+                <div class="col-3 col-md-6">
+                  <div class="d-flex justify-content-center justify-content-md-between">
+                    <div class="col-0 col-md-4 d-none d-md-block text-center">
+                      <p class="info-text">Time start</p>
+                    </div>
+                    <div class="col-0 col-md-4 d-none d-md-block text-center">
+                      <p class="info-text">Order received</p>
+                    </div>
+                    <div class="col-12 col-md-4 text-center mx-auto">
+                      <p class="info-text">Service time</p>
+                    </div>
+                  </div>
+                </div>
+                <!-- end of timers col -->
+                <div class="col-5 col-md-3 text-center time-edits">
+                  <div class="d-flex justify-content-between">
+                    <div class="col-6 text-center">
+                      <p class="info-text">Order received</p>
+                    </div>
+                    <div class="col-6 text-center">
+                      <p class="info-text">Delete transaction</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- end of description row -->
+
+          <div class="kfc__timesList">
+            
+<!-- HERE IS GOING NEW LINE OF SOS for FRONT COUNTER -->
+
+          </div>
+
+        </div>
+        <!-- This is the alert when the average time goes above 5 min -->
+              <div id="kfc-escalation-alert" class="alert alert-danger mt-5" style="display:none;">
+                  The average service time exceeded 5 minutes, please remember to escalate it
+                  to Guest Experience Critical GS53C.
+              </div>
+        <!-- end of table with measured times -->
+
+      </div>
+
+    </div>
+    <!--end of container  -->
+  </section>
+  <!-- End of KFC timers section -->
+
+  <hr class="separate-section">
+
+  <!-- Tim Hortons timers section -->
+  <section id="kfcDTTotal" class="guide-info py-1 mt-1 gray_bgr">
+    <div class="container">
+      <h1 class="text-center my-3 custom-font-size">
+        <img alt="Tim Hortons logo" src="./img/TH-logo-trans.png" width="65">
+        Tim Hortons - Dine in service times
+        <button class="info-icon mt-2" data-toggle="modal" data-target="#kfc_DT_service_info">
+          <i class="fas fa-info-circle"></i>
+        </button>
+      </h1>
+
+      <p class="lead">
+        Wait time starts when Guest receives receipt or cash/card back and ends when Guest receives their order. If checking kiosks transactions, please click on the New Guest button when the customer receives their receipt. Target waiting time is 150 seconds (2:30 min). <br>
+        If average time is above 5 minutes, please escalate it to GS53C
+      </p>
+
+      <div class="container row">
+        <div class="info-img-container col-1">
+          <img src="./img/information.png" alt="info mark" class="info-image-icon">
+        </div>
+        <p class="alert alert-primary col-11">
+          Exclude orders that have <strong>more than 2 drinks</strong> AND/ OR <strong>more than 2 sandwiches</strong>
+        </p>
+      </div>
+
+      <div class="container row">
+        <div class="info-img-container col-1">
+          <img src="./img/mark.png" alt="info mark" class="info-image-icon">
+        </div>
+        <p class="alert alert-danger col-11">
+          Min <strong>5 transactions</strong> MUST be observed
+        </p>
+      </div>
+
+      <!-- service time control - start the new customer -->
+          <div class="container mt-4 ">
+            <div class="row">
+              <div class="col-12 col-md-10 mx-auto text-center d-flex justify-content-center">
+                  <button class="editBox stopwatch mr-2" id="start__DT"> New Guest
+                    <img src="./img/th-donut-gif.gif" alt="" width="60" class="stopwatch-icon">
+                  </button>
+                  <button class="editBox stopwatch restart" onclick="location.reload();">
+                    <i class="fas fa-redo"></i>
+                    <p class="reload-text">Reload page</p>
+                  </button>
+                <!-- </div> -->
+              </div>
+            </div>
+            <div class="row service__times">
+              <div class="col-12 col-md-10 mx-auto">
+                <div class="row justify-content-around">
+                  <div class="col-0 col-sm-0 mx-auto" hidden>
+                    <div class="timer__serviceTime clearfix" id="kfc_DT-timer__serviceTime">
+                      <div class="timer__serviceTime--text left">Avg service time</div>
+                      <div class="timer__serviceTime--value right" id="kfc_DT-serviceTime">0:00</div>
+                    </div>
+                  </div>
+                  <div class="col-10 col-md-6 mx-auto mx-auto mb-3 mb-md-0">
+                    <div class="timer__totalTime clearfix" id="kfc_DT-timer__totalTime">
+                      <div class="timer__totalTime--text left">Avg service time</div>
+                      <div class="timer__totalTime--value right" id="kfc_DT-totalServiceTime">0:00</div>
+                    </div>
+                  </div>
+                  <div class="col-10 col-md-6 mx-auto mx-auto">
+                    <div class="timer__totalTime clearfix transactions" id="timer__totalCars">
+                      <div class="timer__totalTime--text left">Num of trans: </div>
+                      <div class="timer__totalTime--value right" id="kfc_DT-totalCustomers">0</div>
+                    </div>
+                  </div>
+  
+                </div>
+              </div>
+            </div>
+          </div>
+
+     <div class="row py-2">
+            <!-- a table with measured times -->
+            <div class="col-12 mx-auto ">
+              <!-- description row -->
+              <div class="row py-2 info-container">
+                <div class="col-4 col-md-3 text-center align-content-md-center ">
+                  <p class="info-text">Guest description</p>
+                </div>
+                <!-- timers col -->
+                <div class="col-3 col-md-6">
+                  <div class="d-flex justify-content-center justify-content-md-between">
+                    <div class="col-0 col-md-4 d-none d-md-block text-center">
+                      <p class="info-text">Time start</p>
+                    </div>
+                    <div class="col-0 col-md-4 d-none d-md-block text-center">
+                      <p class="info-text">Order received</p>
+                    </div>
+                    <div class="col-12 col-md-4 text-center mx-auto">
+                      <p class="info-text">Service time</p>
+                    </div>
+                  </div>
+                </div>
+                <!-- end of timers col -->
+                <div class="col-5 col-md-3 text-center time-edits">
+                  <div class="d-flex justify-content-between">
+                    <div class="col-6 text-center">
+                      <p class="info-text">Order received</p>
+                    </div>
+                    <div class="col-6 text-center">
+                      <p class="info-text">Delete transaction</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- end of description row -->
+
+          <div class="kfc__DT_List">
+            
+<!-- HERE IS GOING NEW LINE OF SOS TIMES -->
+
+          </div>
+
+        </div>
+        <!-- This is the alert when the average time goes above 5 min -->
+              <div id="kfc_DT-escalation-alert" class="alert alert-danger mt-5" style="display:none;">
+                  The average service time exceeded 5 minutes, please remember to escalate it
+                  to Guest Experience Critical GS53C.
+              </div>
+        <!-- end of table with measured times -->
+
+      </div>
+
+    </div>
+    <!--end of container  -->
+  </section>
+  <!-- End of KFC DT timers section -->
+
+
+  <hr class="separate-section">
+
+
+
+    <!-- This is TH espresso extraction time section -->
+    <section id="kfcHDTotal" class="guide-info py-1 mt-1 ">
+      <div class="container">
+        <h1 class="text-center my-3 custom-font-size">
+          <img alt="Tim Hortons logo" src="./img/espresso.jpg" width="85">
+          Tim Hortons - double espresso extraction times
+          <button class="info-icon mt-2" data-toggle="modal" data-target="#kfc_HD_service_info">
+            <i class="fas fa-info-circle"></i>
+          </button>
+        </h1>
+  
+  
+        <p class="lead">
+          The time starts when you hear the second click in the espresso machine, then stop when you hear the click at the end of the extraction process. <br>
+          Target extraction time is 26 seconds (+/- 3 seconds). Please check the 3 espresso and if out the allowed time range, measure the opportunity. 
+        </p>
+
+        <div class="container row">
+            <div class="info-img-container col-1">
+              <img src="./img/information.png" alt="info mark" class="info-image-icon">
+            </div>
+            <p class="alert alert-primary col-11">
+              Some restaurant participate in the trail where espresso extraction times might be different. <strong>Please check the exception tracer before measuring this opportunity.</strong>
+            </p>
+          </div>
+  
+        <!-- <hr class="style14"> -->
+  
+        <!-- service time control - start the new qutomer -->
+        <div class="container mt-4 ">
+          <div class="row">
+            <div class="col-12 col-md-10 mx-auto text-center d-flex justify-content-center">
+                <button class="editBox stopwatch mr-2" id="start__HD"> New coffee
+                  <img src="./img/th-coffee-icon.png" alt="" width="60" class="stopwatch-icon">
+                </button>
+                <button class="editBox stopwatch restart" onclick="location.reload();">
+                  <i class="fas fa-redo"></i>
+                  <p class="reload-text">Reload page</p>
+                </button>
+              <!-- </div> -->
+            </div>
+          </div>
+          <div class="row service__times">
+            <div class="col-12 col-md-10 mx-auto">
+              <div class="row justify-content-around">
+                <div class="col-0 col-sm-0 mx-auto" hidden>
+                  <div class="timer__serviceTime clearfix" id="kfc_HD-timer__serviceTime">
+                    <div class="timer__serviceTime--text left">Avg extraction time</div>
+                    <div class="timer__serviceTime--value right" id="kfc_HD-serviceTime">0:00</div>
+                  </div>
+                </div>
+                <div class="col-10 col-md-6 mx-auto mx-auto mb-3 mb-md-0">
+                  <div class="timer__totalTime clearfix" id="kfc_HD-timer__totalTime">
+                    <div class="timer__totalTime--text left">Avg extraction time</div>
+                    <div class="timer__totalTime--value right" id="kfc_HD-totalServiceTime">0:00</div>
+                  </div>
+                </div>
+                <div class="col-10 col-md-6 mx-auto mx-auto ">
+                  <div class="timer__totalTime clearfix transactions" id="timer__totalCust">
+                    <div class="timer__totalTime--text left">Num of coffees: </div>
+                    <div class="timer__totalTime--value right" id="kfc_HD-totalCustomers">0</div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+  
+        <div class="row py-2">
+          <!-- a table with measured times -->
+          <div class="col-12 mx-auto ">
+            <!-- description row -->
+            <div class="row py-2 info-container">
+              <div class="col-4 col-md-3 text-center align-content-md-center ">
+                <p class="info-text">Espresso number</p>
+              </div>
+              <!-- timers col -->
+              <div class="col-3 col-md-6">
+                <div class="d-flex justify-content-center justify-content-md-between">
+                  <div class="col-0 col-md-4 d-none d-md-block text-center">
+                    <p class="info-text">Second click</p>
+                  </div>
+                  <div class="col-0 col-md-4 d-none d-md-block text-center">
+                    <p class="info-text">Extraction completed</p>
+                  </div>
+                  <div class="col-12 col-md-4 text-center mx-auto">
+                    <p class="info-text">Extraction time</p>
+                  </div>
+                </div>
+              </div>
+              <!-- end of timers col -->
+              <div class="col-5 col-md-3 text-center time-edits">
+                <div class="d-flex justify-content-between">
+                  <div class="col-6 text-center">
+                    <p class="info-text">Extraction time</p>
+                  </div>
+                  <div class="col-6 text-center">
+                    <p class="info-text">Delete extraction time</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- end of description row -->
+  
+            <div class="kfc__HD_List">
+             
+              <!-- HERE GOES NEW LINE OF SOS TIMER -->
+
+
+            </div>
+  
+          </div>
+          <!-- end of table with measured times -->
+  
+        </div>
+  
+      </div>
+      <!--end of container  -->
+    </section>
+    <!-- End of KFC Home delivery timers section -->
+
+    
+   
+
+
+<!-- *********** MODALS ************************************** -->
+
+      <!-- modal KFC FC service time info -->
+  <div class="modal fade" id="kfc_fc_service_info" role="dialog">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header text-center modal-header-timers">
+          <img src="./img/plk-logo-trans.png" alt="kfc logo" class="img-fluid" width="60" />
+          <h5 class="modal-title ml-4 pt-2"> How to measure Popeyes dine-in speed of service</h5>
+          <button type="button" class="close close-info" data-dismiss="modal" aria-label="close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-10 mx-auto">
+                <ol class="mt-3 ml-0">
+                  <li class="list-item">Click <em><b> New Guest </b></em> button when customer paid for their order (receipt is printed). It could be either kiosk or front counter POS.</li>
+                  <li class="list-item">Then click on sandwich icon
+                    <img src="./img/plk-hamburger.png" class="food-img px-1"/>  when customer receives their order.
+                  </li>
+                  <li class="list-item">Once you click on the meal icon, app will calculate <em><b>service </b></em> time for that transaction and update the <em><b>average speed of service time </b></em> based on number measured transactions.
+                     Results will be displayed in fields on the top of the form. 
+                  </li>
+                  <li class="list-item">Measured average service times are color coded: <br /> <span class="green-colour">Green = ON TARGET (below 2:15)</span>, <span class="orange-colour">ORANGE = PARTIAL POINTS AWARDED (between 2:16 and 3:15)</span>, <span class="red-colour">RED = ZERO POINTS AWARDED (above 3:15)</span> 
+                 </li>
+                  <li class="list-item">Click on trash icon  
+                    <img src="./img/bin.png" class="food-img px-1"/> if you want to delete an of the customer (i.e. when you lost track of that customer)
+                  </li>
+                  <li class="list-item">If icon is active, you can overwrite payment of food received time.
+                  </li>
+                  <li class="list-item">Click on reload page button 
+                    <i class="fas fa-redo-alt px-1"></i> 
+                    if you want to reload the page (clear all the data on the page). Warning - all the measured times will be lost!!!
+                  </li>
+                </ol>
+                <!-- <p class="muted">*OTD - Order to Delivery </p> -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn close-btn" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- end of modal KFC FC service time info -->
+
+
+  <!-- modal KFC DT service time info -->
+  <div class="modal fade" id="kfc_DT_service_info" role="dialog">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header text-center modal-header-timers">
+          <img src="./img/TH-logo-trans.png" alt="kfc logo" class="img-fluid" width="60" />
+          <h5 class="modal-title ml-4 pt-3">How to measure TH Dine-in Speed of Service time</h5>
+          <button type="button" class="close close-info" data-dismiss="modal" aria-label="close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-10 mx-auto">
+                <ol class="mt-3 ml-0">
+                  <li class="list-item">Click <em><b> New Guest </b></em> button when customer paid for their order (when received the receipt)</li>
+                  <li class="list-item">Click on the donut icon
+                    <img src="./img/th-food.png" class="food-img px-1"/>  when guest received the order.
+                  </li>
+                  <li class="list-item">Once you click on the donut icon, it will calculate transaction <em><b>service </b></em> time. Average service time will be updated based on the number of measured transactions. Results will be displayed in fields on the top of the form. 
+                  </li>
+                  <li class="list-item">Measured average service times are color coded: <br /> <span class="green-colour">Green = ON TARGET (below 2:30)</span>, <span class="orange-colour">ORANGE = PARTIAL POINTS AWARDED (between 2:31 and 4:00) </span>, <span class="red-colour">RED = ZERO POINTS AWARDED (above 4:00)</span>
+                 </li>
+                  <li class="list-item">Click on trash icon  
+                    <img src="./img/bin.png" class="food-img px-1"/> if you want to delete that guest/transaction.
+                  </li>
+                  <li class="list-item">If icon is active, you can overwrite corresponding time.
+                  </li>
+                  <li class="list-item">Click on reload page button 
+                    <i class="fas fa-redo-alt px-1"></i> 
+                    if you want to reload the page (clear all the data on the page).  Warning - all the measured times will be lost!!!
+                  </li>
+                </ol>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn close-btn" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- end of modal KFC DT service time info -->
+
+
+  <!-- modal KFC Home delivery service time info -->
+  <div class="modal fade" id="kfc_HD_service_info" role="dialog">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header text-center modal-header-timers">
+          <img src="./img/th-coffee-icon.png" alt="kfc logo" class="img-fluid" width="60" />
+          <h5 class="modal-title ml-4 pt-2">How to measure double espresso extraction times</h5>
+          <button type="button" class="close close-info" data-dismiss="modal" aria-label="close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-10 mx-auto">
+                <ol class="mt-3 ml-0">
+                  <li class="list-item">Click <em><b> New coffee </b></em> button when you hear second click on the espresso machine</li>
+                  <li class="list-item">Click on coffee cup 
+                    <img src="./img/coffee-cup.png" class="food-img px-1"/>
+                    once extraction finishes (you should hear another click).
+                  </li>
+                  <li class="list-item">Once you click on coffee cup icon, app will calculate espresso extraction time for that espresso and then recalculate the average extraction time based on number measured shots. Results will be displayed in the field on the top of the form. 
+                  </li>
+                  <li class="list-item">Total extraction times and avg extraction are color coded: <br /> <span class="green-colour">Green = ON TARGET (between 23 and 29 seconds)</span>, <span class="red-colour">RED = MORE THAN 3 seconds ABOVE or BELOW TARGET</span> (TARGET = 26 seconds).
+                 </li>
+                  <li class="list-item">Click on trash icon  
+                    <img src="./img/bin.png" class="food-img px-1"/> if you want to delete that extraction.
+                  </li>
+                  <li class="list-item">If icon is active, you can overwrite corresponding time.
+                  </li>
+                  <li class="list-item">Click on reload page button 
+                    <i class="fas fa-redo-alt px-1"></i> 
+                    if you want to reload the page (clear all the data on the page). Warning - all the measured times will be lost!!!
+                  </li>
+                </ol>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn close-btn" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- end of modal KFC Home delivery service time info -->
+
+
+   <!-- modal Burger King service time info -->
+   <div class="modal fade" id="bk_service_info" role="dialog">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header text-center modal-header-timers">
+          <img src="img/bk_whopper.gif" alt="kfc logo" class="img-fluid" width="60" />
+          <h5 class="modal-title ml-4 pt-4">How to measure Burger King front counter service times</h5>
+          <button type="button" class="close close-info" data-dismiss="modal" aria-label="close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-10 mx-auto">
+                <ol class="mt-3 ml-0">
+                  <li class="list-item">Click <em><b> New Guest </b></em> button when Guest receives receipt or cash/card back.</li>
+                  <li class="list-item">Click on hamburger meal icon 
+                    <img src="img/fast-food-burger.png" class="food-img mx-1"/>  when customer receives his/her order.
+                  </li>
+                  <li class="list-item">Once you click hamburger icon, it will calculate front counter service time and it will display it in the field. Average service time will be calculated base on completed transactions.
+                     Results will be displayed in the field on the top of the form. 
+                  </li>
+                  <li class="list-item">Total service time and avg service time are color coded: <br /> <span class="green-colour">Green = ON TARGET (below 2:00)</span>, <span class="orange-colour">ORANGE = PART POINTS AWARDED (between 2:01 and 3:00)</span>, <span class="red-colour">RED = ABOVE TARGET (above 3:00)</span>
+                 </li>
+                  <li class="list-item">Click on trash icon  
+                    <img src="img/bin.png" class="food-img mx-1"/> if you want to delete that customer/transaction.
+                  </li>
+                  <li class="list-item">If icon is active, you can overwrite corresponding time.
+                  </li>
+                  <li class="list-item">Click on reload page button 
+                    <i class="fas fa-redo-alt"></i> 
+                    if you want to reload the page (clear all the data on the page).
+                  </li>
+                </ol>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn close-btn" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- end of modal Burger King service time info -->
+
+<!-- bootbox element -->
+  <p><a class="show-alert" href=#></a></p>
+
+<!-- end bootbox element -->
+
+<!-- Footer -->
+<footer class="footer bg-dark">
+
+  <!-- Copyright -->
+  <div class="text-light text-center py-3">© 2025 Copyright:
+    <p class="small"> <a class="link-primary" href="mailto:radek.wilk@intertek.com">Radek Wilk</a></p>
+  </div>
+  <!-- Copyright -->
+
+</footer>
+<!-- Footer -->
+
+  <!-- jquery -->
+  <script src="./js/jquery-3.3.1.min.js"></script>
+  <!-- bootstrap js -->
+  <script src="./js/bootstrap.bundle.min.js"></script>
+  <!-- script js -->
+  <!-- masking libraries -->
+  <script src="./js/inputmask.js"></script>
+  <script src="./js/inputmask_binding.js"></script>
+  <!-- end of masking libraries -->
+  <!-- moment.js -->
+  <script src="./js/moment.js"></script>
+  <!-- clockdown.js -->
+  <script src="./js/clockdown.js"></script>
+  <!-- <script src="../js/app.js"></script> -->
+  <script src="./js/timers_app.js"></script>
+  <!-- nice alert boxes library -->
+  <script src="./js/bootbox.js"></script>
+</body>
+
+</html>
